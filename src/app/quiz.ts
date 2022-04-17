@@ -1,4 +1,7 @@
+
+export class Answer {
+    constructor(public option: string, public correct?: boolean) {}
+}
 export class Quiz {
-    question? : string
-    answer? : {option : string , correct : boolean}[];
+    constructor(public question: string, public answer: Answer[]) {}
 }

@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Which country does the Azores archipelago belong to?",
+    "answer": [
+      {
+        "option": "Spain",
+        "correct": false
+      },
+      {
+        "option": "Portugal",
+        "correct": true
+      },
+      {
+        "option": "France",
+        "correct": false
+      },
+      {
+        "option": "USA",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Which country does Madeira Island belong to?",
+    "answer": [
+      {
+        "option": "Greece",
+        "correct": false
+      },
+      {
+        "option": "Spain",
+        "correct": false
+      },
+      {
+        "option": "Portugal",
+        "correct": true
+      },
+      {
+        "option": "Turkey",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Which country does the Galapagos Islands belong to?",
+    "answer": [
+      {
+        "option": "Ecuador",
+        "correct": true
+      },
+      {
+        "option": "Peru",
+        "correct": false
+      },
+      {
+        "option": "Colombia",
+        "correct": false
+      },
+      {
+        "option": "Argentina",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Which country does the island of Reunion belong to?",
+    "answer": [
+      {
+        "option": "France & Great Britain",
+        "correct": false
+      },
+      {
+        "option": "France & Spain",
+        "correct": false
+      },
+      {
+        "option": "Netherlands & Great Britain",
+        "correct": false
+      },
+      {
+        "option": "France & Netherlands",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Which countries does the Caribbean island of St. Martin belong to?",
+    "answer": [
+      {
+        "option": "France",
+        "correct": true
+      },
+      {
+        "option": "Madagascar",
+        "correct": false
+      },
+      {
+        "option": "Canada",
+        "correct": false
+      },
+      {
+        "option": "USA",
+        "correct": false
+      }
+    ]
+  }
+]

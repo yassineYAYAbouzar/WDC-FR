@@ -1,0 +1,107 @@
+[
+  {
+    "question": "In canopic jars you filled...",
+    "answer": [
+      {
+        "option": "Human organs",
+        "correct": true
+      },
+      {
+        "option": "Nile water to carry it home",
+        "correct": false
+      },
+      {
+        "option": "Dry grasses and leaves to feed goats",
+        "correct": false
+      },
+      {
+        "option": "Urine and excrement, because they were chamber pots",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "The most popular drink of the Egyptians was ...",
+    "answer": [
+      {
+        "option": "Lemonade from lotus flower extract",
+        "correct": false
+      },
+      {
+        "option": "Pomegranate juice",
+        "correct": false
+      },
+      {
+        "option": "Apple juice",
+        "correct": false
+      },
+      {
+        "option": "Beer",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Which couple ended up as tragically as Romeo and Juliet?",
+    "answer": [
+      {
+        "option": "Marcus Antonius and Cleopatra",
+        "correct": true
+      },
+      {
+        "option": "Akhenaten and Nefertiti",
+        "correct": false
+      },
+      {
+        "option": "Ramses II and his revered Nefertari",
+        "correct": false
+      },
+      {
+        "option": "Osiris and Isis",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "The goddess of love and motherhood, Hathor, was portrayed as ...",
+    "answer": [
+      {
+        "option": "The sun",
+        "correct": false
+      },
+      {
+        "option": "A cow",
+        "correct": true
+      },
+      {
+        "option": "A woman with five breasts, according to the lucky number of the Egyptians",
+        "correct": false
+      },
+      {
+        "option": "A breeding bird",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "In ancient times, a Nilometer was used to determine ...",
+    "answer": [
+      {
+        "option": "The speed of the Nile",
+        "correct": false
+      },
+      {
+        "option": "The width of the Nile",
+        "correct": false
+      },
+      {
+        "option": "The water level of the Nile",
+        "correct": true
+      },
+      {
+        "option": "The temperature of the water",
+        "correct": false
+      }
+    ]
+  }
+]
