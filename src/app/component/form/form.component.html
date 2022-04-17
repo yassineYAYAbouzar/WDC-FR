@@ -1,0 +1,97 @@
+<!-- <form #f="ngForm" (ngSubmit)="submit(f)">
+    <div class="form-group">
+        <label for="exampleInputEmail1">FirstName</label>
+        <input 
+                required 
+                minlength="3"
+                maxlength="10" 
+                ngModel 
+                name="firstname"
+                #firsName="ngModel" 
+                type="text" 
+                class="form-control" 
+                id="exampleInputEmail1" 
+                aria-describedby="emailHelp">
+        <div 
+            class="alert alert-danger" 
+            *ngIf="firsName.touched && !firsName.valid">
+            <div 
+                *ngIf="firsName.hasError('required')" >
+                Ce champ est obligatoire !!
+            </div>
+            <div 
+                *ngIf="firsName.hasError('minlength')" >
+                Ce champ doit avoir au moins  
+                {{firsName.getError('minlength').actualLength}}
+                    / {{firsName.getError('minlength').requiredLength}} chars !!
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">LastName</label>
+        <input ngModel name="LastName" #LastName type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">comment</label>
+        <textarea ngModel name="comment" #comment class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+
+
+    <div class="checkbox">
+        <label class="checkbox">S'abonner</label>
+        <input ngModel name="abonner"  type="checkbox">
+    </div>
+
+
+    <div class="radio" *ngFor="let one of ContactARr">
+        <label for="">
+            {{one.name}}
+            <input type="radio" ngModel name="contactRadio" id="" [value]="one.id">
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Enregistre</button>
+</form>
+
+{{f.value | json}} -->
+
+
+
+
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input 
+        type="email" 
+        formControlName="email"
+        class="form-control" 
+        >
+    </div>
+    <div 
+        class="alert alert-danger" 
+        *ngIf="email?.touched && email?.invalid">
+        <div  *ngIf="email?.getError('required')">
+            Ce champ est obligatoire !!
+        </div>
+        <div  *ngIf="email?.getError('email')">
+            Ce champ est accepte ensi que email !!
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input 
+        type="password" 
+        formControlName="password"
+        class="form-control" 
+        >
+        <div 
+        class="alert alert-danger" 
+        *ngIf="password?.touched && password?.invalid">
+        Ce champ est obligatoire !!
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
