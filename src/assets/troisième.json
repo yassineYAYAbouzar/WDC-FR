@@ -1,106 +1,91 @@
 [
   {
-    "question": "Which country does the Azores archipelago belong to?",
+    "question": "Which Object Oriented Terms are Supported by Typescript?",
     "answer": [
       {
-        "option": "Spain",
-        "correct": false
+        "option": "modules"
       },
       {
-        "option": "Portugal",
-        "correct": true
+          "option": "interfaces"
       },
       {
-        "option": "France",
-        "correct": false
+          "option": "classes"
       },
       {
-        "option": "USA",
-        "correct": false
+          "option": "All of the above",
+          "correct": true
       }
     ]
   },
   {
-    "question": "Which country does Madeira Island belong to?",
+    "question": "Router is part of which of the following module ?",
     "answer": [
       {
-        "option": "Greece",
-        "correct": false
+        "option": "@angular/core"
       },
       {
-        "option": "Spain",
-        "correct": false
+          "option": "@angular/router",
+          "correct": true
       },
       {
-        "option": "Portugal",
-        "correct": true
+          "option": "Both"
       },
       {
-        "option": "Turkey",
-        "correct": false
+          "option": "None of the above"
       }
     ]
   },
   {
-    "question": "Which country does the Galapagos Islands belong to?",
+    "question": "Which of the following is correct about TypeScript?",
     "answer": [
       {
-        "option": "Ecuador",
-        "correct": true
+        "option": "Angular is based on TypeScript"
       },
       {
-        "option": "Peru",
-        "correct": false
+          "option": "This is a superset about JavaScript"
       },
       {
-        "option": "Colombia",
-        "correct": false
+          "option": "TypeScript is maintained by Microsoft"
       },
       {
-        "option": "Argentina",
-        "correct": false
+          "option": "All the above",
+          "correct": true
       }
     ]
   },
   {
-    "question": "Which country does the island of Reunion belong to?",
+    "question": "When was the first time TypeScript was made public?",
     "answer": [
       {
-        "option": "France & Great Britain",
-        "correct": false
+        "option": "December 2012"
       },
       {
-        "option": "France & Spain",
-        "correct": false
+          "option": "October 2012",
+          "correct": true
       },
       {
-        "option": "Netherlands & Great Britain",
-        "correct": false
+          "option": "October 2013"
       },
       {
-        "option": "France & Netherlands",
-        "correct": true
+          "option": "November 2013"
       }
     ]
   },
   {
-    "question": "Which countries does the Caribbean island of St. Martin belong to?",
+    "question": "Who developed and designed TypeScript?",
     "answer": [
       {
-        "option": "France",
-        "correct": true
+        "option": "Amazon"
       },
       {
-        "option": "Madagascar",
-        "correct": false
+          "option": "Oracle"
       },
       {
-        "option": "Canada",
-        "correct": false
+          "option": "Microsoft",
+          "correct": true
       },
       {
-        "option": "USA",
-        "correct": false
+          "option": "TypeScript"
       }
     ]
   }

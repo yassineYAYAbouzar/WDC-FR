@@ -1,106 +1,91 @@
 [
   {
-    "question": "In canopic jars you filled...",
+    "question": "Which of the following does TypeScript use to specify types?",
     "answer": [
       {
-        "option": "Human organs",
+        "option": ":",
         "correct": true
       },
       {
-        "option": "Nile water to carry it home",
-        "correct": false
+          "option": ";"
       },
       {
-        "option": "Dry grasses and leaves to feed goats",
-        "correct": false
+          "option": "!"
       },
       {
-        "option": "Urine and excrement, because they were chamber pots",
-        "correct": false
+          "option": "&"
       }
     ]
   },
   {
-    "question": "The most popular drink of the Egyptians was ...",
+    "question": "Which of the following is NOT a type used in TypeScript?",
     "answer": [
       {
-        "option": "Lemonade from lotus flower extract",
-        "correct": false
+        "option": "number"
       },
       {
-        "option": "Pomegranate juice",
-        "correct": false
+          "option": "string"
       },
       {
-        "option": "Apple juice",
-        "correct": false
+          "option": "boolean"
       },
       {
-        "option": "Beer",
-        "correct": true
+          "option": "enum",
+          "correct": true
       }
     ]
   },
   {
-    "question": "Which couple ended up as tragically as Romeo and Juliet?",
+    "question": "How can we specify properties and methods for an object in TypeScript?",
     "answer": [
       {
-        "option": "Marcus Antonius and Cleopatra",
-        "correct": true
+        "option": "Use classes."
       },
       {
-        "option": "Akhenaten and Nefertiti",
-        "correct": false
+          "option": "Use interfaces.",
+          "correct": true
       },
       {
-        "option": "Ramses II and his revered Nefertari",
-        "correct": false
+          "option": "Use enums."
       },
       {
-        "option": "Osiris and Isis",
-        "correct": false
+          "option": "Use async/await."
       }
     ]
   },
   {
-    "question": "The goddess of love and motherhood, Hathor, was portrayed as ...",
+    "question": "How else can Array<number> be written in TypeScript?",
     "answer": [
-      {
-        "option": "The sun",
-        "correct": false
-      },
-      {
-        "option": "A cow",
-        "correct": true
-      },
-      {
-        "option": "A woman with five breasts, according to the lucky number of the Egyptians",
-        "correct": false
-      },
-      {
-        "option": "A breeding bird",
-        "correct": false
-      }
-    ]
+          {
+              "option": "@number"
+          },
+          {
+              "option": "number[]",
+              "correct": true
+          },
+          {
+              "option": "number!"
+          },
+          {
+              "option": "number?"
+          }
+        ]
   },
   {
-    "question": "In ancient times, a Nilometer was used to determine ...",
+    "question": "In which of these does a class take parameters?",
     "answer": [
       {
-        "option": "The speed of the Nile",
-        "correct": false
-      },
-      {
-        "option": "The width of the Nile",
-        "correct": false
-      },
-      {
-        "option": "The water level of the Nile",
+        "option": "constructor",
         "correct": true
       },
       {
-        "option": "The temperature of the water",
-        "correct": false
+          "option": "destructor"
+      },
+      {
+          "option": "import"
+      },
+      {
+          "option": "subscribe"
       }
     ]
   }

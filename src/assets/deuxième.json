@@ -1,106 +1,91 @@
 [
   {
-    "question": "What is 2 + 3?",
+    "question": "Which is NOT an access modifier?",
     "answer": [
       {
-        "option": "5",
-        "correct": true
+        "option": "private"
       },
       {
-        "option": "15",
-        "correct": false
+          "option": "protected"
       },
       {
-        "option": "3",
-        "correct": false
+          "option": "public"
       },
       {
-        "option": "pi",
-        "correct": false
+          "option": "async",
+          "correct": true
       }
     ]
   },
   {
-    "question": "What is 3 - 9?",
+    "question": "Which keyword allows us to share information between files in TypeScript?",
     "answer": [
       {
-        "option": "3",
-        "correct": false
+        "option": "import"
       },
       {
-        "option": "-6",
-        "correct": true
+          "option": "export",
+          "correct": true
       },
       {
-        "option": "Bonjour",
-        "correct": false
+          "option": "async"
       },
       {
-        "option": "pi",
-        "correct": false
+          "option": "constructor"
       }
     ]
   },
   {
-    "question": "What is 3 + 2 x 5",
+    "question": "Which is an array method to generate a new array based on a condition?",
     "answer": [
       {
-        "option": "15",
-        "correct": false
-      },
-      {
-        "option": "30",
-        "correct": false
-      },
-      {
-        "option": "25",
-        "correct": false
-      },
-      {
-        "option": "13",
+        "option": "filter",
         "correct": true
+      },
+      {
+          "option": "map"
+      },
+      {
+          "option": "async"
+      },
+      {
+          "option": "enum"
       }
     ]
   },
   {
-    "question": "How many meters is one kilometer?",
+    "question": "How is a property accessible within a class?",
     "answer": [
       {
-        "option": "10000",
-        "correct": false
-      },
-      {
-        "option": "10",
-        "correct": false
-      },
-      {
-        "option": "1000",
+        "option": "Using this.propertyName",
         "correct": true
       },
       {
-        "option": "100",
-        "correct": false
+          "option": "Accessors"
+      },
+      {
+          "option": "Destructuring"
+      },
+      {
+          "option": "Arrow function"
       }
     ]
   },
   {
-    "question": "What is the checksum of 362?",
+    "question": "Which of the following is a filename extension for typescript?",
     "answer": [
       {
-        "option": "10",
-        "correct": false
-      },
-      {
-        "option": "11",
+        "option": ".tsx",
         "correct": true
       },
       {
-        "option": "12",
-        "correct": false
+          "option": ".nod"
       },
       {
-        "option": "13",
-        "correct": false
+          "option": ".txt"
+      },
+      {
+          "option": ".tt"
       }
     ]
   }
