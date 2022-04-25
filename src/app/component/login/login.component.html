@@ -1,0 +1,140 @@
+<div class="login-wrap mt-5">
+    <form class="login-html" [formGroup]="loginForm" (ngSubmit)="onSubmiyt()">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" [checked]="loginPage == true"><label for="tab-1" class="tab">Sign In</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up" [checked]="loginPage == false"><label for="tab-2" class="tab">Sign Up</label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+          <div class="group">
+            <label for="user" class="label">Username</label>
+            <input id="user" type="text" class="input"  formControlName="username">
+            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="alert alert-danger rounded-pill mt-2">
+                <p class="text-danger" 
+                *ngIf="loginForm.get('username')?.getError('required')"
+                >
+                this field is required
+                </p>
+            </div>
+          </div>
+          <div class="group">
+            <label for="pass" class="label">Password</label>
+            <input id="pass" formControlName="password" type="password" class="input" data-type="password">
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="alert alert-danger rounded-pill mt-2">
+                <p class="text-danger" 
+                *ngIf="loginForm.get('password')?.getError('required')"
+                >
+                this field is required
+                </p>
+                <p class="text-danger" 
+                *ngIf="loginForm.get('password')?.getError('minlength')"
+                >
+                this field is must has greater than 6 charachter  
+                </p>
+            </div>
+          </div>
+          <div class="group">
+            <input id="check" type="checkbox" class="check" checked>
+            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+          </div>
+          <div class="group">
+            <input [disabled]="loginForm.invalid" type="submit" class="button"  value="Sign In">
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <a href="#forgot">Forgot Password?</a>
+          </div>
+        </div>
+        <form class="sign-up-htm" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+          <div class="d-flex justify-content-around">
+          <div class="group">
+            <label for="user" class="label" >FirstName</label>
+            <input id="user" type="text" class="input " formControlName="prenom">
+            <div *ngIf="loginForm.get('prenom')?.invalid && loginForm.get('prenom')?.touched" class="alert alert-danger rounded-pill mt-2">
+              <p class="text-danger" 
+              *ngIf="loginForm.get('prenom')?.getError('required')"
+              >
+              this field is required
+              </p>
+          </div>
+          </div>
+          <div class="group">
+            <label for="user" class="label">LastName</label>
+            <input id="user" type="text" class="input" formControlName="nom">
+            <div *ngIf="loginForm.get('nom')?.invalid && loginForm.get('nom')?.touched" class="alert alert-danger rounded-pill mt-2">
+              <p class="text-danger" 
+              *ngIf="loginForm.get('nom')?.getError('required')"
+              >
+              this field is required
+              </p>
+          </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-around">
+          <div class="group">
+            <label for="user" class="label">Email</label>
+            <input id="user" type="email" formControlName="email" class="input">
+            <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="alert alert-danger rounded-pill mt-2">
+              <p class="text-danger" 
+              *ngIf="loginForm.get('email')?.getError('required')"
+              >
+              this field is required
+              </p>
+          </div>
+          </div>
+          <div class="group">
+            <label for="user" class="label">Telephone</label>
+            <input id="user" type="text" formControlName="telephone" class="input">
+            <div *ngIf="loginForm.get('telephone')?.invalid && loginForm.get('telephone')?.touched" class="alert alert-danger rounded-pill mt-2">
+              <p class="text-danger" 
+              *ngIf="loginForm.get('telephone')?.getError('required')"
+              >
+              this field is required
+              </p>
+          </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-around">
+          <div class="group">
+            <label for="user" class="label">Domaine</label>
+            <input id="user" formControlName="domaine" type="text" class="input">
+            <div *ngIf="loginForm.get('domaine')?.invalid && loginForm.get('domaine')?.touched" class="alert alert-danger rounded-pill mt-2">
+              <p class="text-danger" 
+              *ngIf="loginForm.get('domaine')?.getError('required')"
+              >
+              this field is required
+              </p>
+          </div>
+          </div>
+          <div class="group">
+            <label for="pass" class="label">Password</label>
+            <input id="pass" type="password" formControlName="password" class="input" data-type="password">
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="alert alert-danger rounded-pill mt-2">
+              <p class="text-danger" 
+              *ngIf="loginForm.get('password')?.getError('required')"
+              >
+              this field is required
+              </p>
+          </div>
+          </div>
+        </div>
+          <div class="group">
+            <label for="pass" class="label">Structure</label>
+            <input id="pass" type="text" formControlName="structure" class="input">
+            <div *ngIf="loginForm.get('structure')?.invalid && loginForm.get('structure')?.touched" class="alert alert-danger rounded-pill mt-2">
+              <p class="text-danger" 
+              *ngIf="loginForm.get('structure')?.getError('required')"
+              >
+              this field is required
+              </p>
+          </div>
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Sign Up">
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <a for="tab-1">Already Member?</a>
+          </div>
+        </form>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,33 @@
+ <main class="content">
+    <h1>Contacts</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, perspiciatis!</p>
+    <h2>Subheading</h2>      
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maiores hic, magnam deserunt ex voluptatum, ducimus consectetur et aut nobis quod maxime odit itaque natus ipsam quisquam quo inventore laudantium.</p>      
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates fuga debitis explicabo voluptatum deleniti?</p>      
+    <table>
+      <thead>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+          <th>Telephone</th>
+          <th>Activity</th>
+          <th>etat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let respo of participantList">
+          <td>{{respo.prenom}}</td>
+          <td>{{respo.nom}}</td>
+          <td>{{respo.email}}</td>
+          <td>{{respo.telephone}}</td>
+          <td>{{respo.structure}}</td>
+          <td>{{respo.etat}}</td>
+          <td>
+            <button class="btn btn-success" (click)="update(respo.id)">Edit</button>
+            <button class="btn btn-danger" (click)="delete(respo.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
