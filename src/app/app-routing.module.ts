@@ -4,11 +4,13 @@ import { AppComponent } from './component/main/app.component';
 import { LoginComponent } from './component/login/login.component';
 import { WelcomeComponent } from './component/welcome/welcome.component';
 import { NotfoundComponent } from './component/notfound/notfound.component';
-import { ResponsableListComponent } from './component/responsable-list/responsable-list.component';
+import { ResponsableListComponent } from './component/responsable/responsable-list/responsable-list.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AlredyAuthGuard } from './guards/alredy-auth.guard';
-import { ParticipantListComponent } from './component/participant-list/participant-list.component';
+import { ParticipantListComponent } from './component/participant/participant-list/participant-list.component';
 import { ActivityListComponent } from './component/activity-list/activity-list.component';
+import { AddResponsableComponent } from './component/responsable/add-responsable/add-responsable.component';
+import { EditResponsableComponent } from './component/responsable/edit-responsable/edit-responsable.component';
 
 const routes: Routes = [
 
@@ -24,6 +26,14 @@ const routes: Routes = [
       {
         path : "listParticipant",
         component : ParticipantListComponent
+      },
+      {
+        path : "addResponsable",
+        component : AddResponsableComponent
+      },
+      {
+        path : "editResponsable/:id",
+        component : EditResponsableComponent
       },
       {
         path : "listActivity",

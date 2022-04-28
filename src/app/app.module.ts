@@ -10,11 +10,15 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { AccountComponent } from './component/account/account.component';
 import { WelcomeComponent } from './component/welcome/welcome.component';
 import { NotfoundComponent } from './component/notfound/notfound.component';
-import { ResponsableListComponent } from './component/responsable-list/responsable-list.component';
+import { ResponsableListComponent } from './component/responsable/responsable-list/responsable-list.component';
 import { JwtInterceptor } from './service/auth/jwt.interceptor';
 import { AppBarComponent } from './component/app-bar/app-bar.component';
-import { ParticipantListComponent } from './component/participant-list/participant-list.component';
+import { ParticipantListComponent } from './component/participant/participant-list/participant-list.component';
 import { ActivityListComponent } from './component/activity-list/activity-list.component';
+import { AddResponsableComponent } from './component/responsable/add-responsable/add-responsable.component';
+import { EditResponsableComponent } from './component/responsable/edit-responsable/edit-responsable.component';
+import { EditParticipantComponent } from './component/participant/edit-participant/edit-participant.component';
+import { AddParticipantComponent } from './component/participant/add-participant/add-participant.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import { ActivityListComponent } from './component/activity-list/activity-list.c
     AppBarComponent,
     ParticipantListComponent,
     ActivityListComponent,
+    AddResponsableComponent,
+    EditResponsableComponent,
+    EditParticipantComponent,
+    AddParticipantComponent,
   ],
   imports: [
     BrowserModule,

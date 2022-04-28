@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ParticipantService } from '../../service/participant/participant.service';
+import { ParticipantService } from '../../../service/participant/participant.service';
 
 @Component({
   selector: 'app-participant-list',
@@ -13,7 +13,7 @@ export class ParticipantListComponent implements OnInit {
   participantList : any
   
   ngOnInit(): void {
-    this.participantService.fetchParticipantList().subscribe(res=>{
+    this.participantService.fetchDataList().subscribe(res=>{
       this.participantList = res
     })
   }

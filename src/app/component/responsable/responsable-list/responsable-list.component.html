@@ -4,6 +4,8 @@
     <h2>Subheading</h2>      
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maiores hic, magnam deserunt ex voluptatum, ducimus consectetur et aut nobis quod maxime odit itaque natus ipsam quisquam quo inventore laudantium.</p>      
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates fuga debitis explicabo voluptatum deleniti?</p>      
+    <a routerLink="addResponsable" class="btn btn-success"><i class="material-icons">&#xE147;</i><span>Add New Responsable</span></a>
+
     <table>
       <thead>
         <tr>
@@ -25,7 +27,7 @@
           <td>{{respo.telephone}}</td>
           <td>{{respo.etat}}</td>
           <td>
-            <button class="btn btn-success" (click)="update(respo.id)">Edit</button>
+            <a routerLink="editResponsable/{{respo.id}}" class="btn btn-success">Edit</a>
             <button class="btn btn-danger" (click)="delete(respo.id)">Delete</button>
           </td>
         </tr>
