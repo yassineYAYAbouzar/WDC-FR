@@ -24,15 +24,12 @@ export class EditResponsableComponent implements OnInit {
               private route : Router ,
               private responsableService :ResponsableService) {
     // subscribe to router event
-
-  
   }
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
-      console.log(params['id']);
       this.responsableService.fetchDataById(params['id']).subscribe(res=>{
-       
         this.responsable = res
+        console.log("this.responsable")
         console.log(this.responsable)
       })
     });
