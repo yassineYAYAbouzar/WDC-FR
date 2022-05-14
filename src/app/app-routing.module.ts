@@ -14,6 +14,9 @@ import { EditResponsableComponent } from './component/responsable/edit-responsab
 import { EditParticipantComponent } from './component/participant/edit-participant/edit-participant.component';
 import { EditActivityComponent } from './component/activity/edit-activity/edit-activity.component';
 import { AddActivityComponent } from './component/activity/add-activity/add-activity.component';
+import { ListExrciceComponent } from './component/exercice/list-exrcice/list-exrcice.component';
+import { AddExrciceComponent } from './component/exercice/add-exrcice/add-exrcice.component';
+import { UpdateExrciceComponent } from './component/exercice/update-exrcice/update-exrcice.component';
 
 const routes: Routes = [
 
@@ -31,12 +34,20 @@ const routes: Routes = [
         component : ParticipantListComponent
       },
       {
+        path : "listExrcice",
+        component : ListExrciceComponent
+      },
+      {
         path : "addResponsable",
         component : AddResponsableComponent
       },
       {
         path : "addActivity",
         component : AddActivityComponent
+      },
+      {
+        path : "addexercice",
+        component : AddExrciceComponent
       },
       {
         path : "editResponsable/:id",
@@ -49,6 +60,10 @@ const routes: Routes = [
       {
         path : "editActivity/:id",
         component : EditActivityComponent
+      },
+      {
+        path : "editexercice/:id",
+        component : UpdateExrciceComponent
       },
       {
         path : "listActivity",

@@ -11,8 +11,8 @@ import { ActivityService } from '../../../service/activity/activity.service';
 export class AddActivityComponent implements OnInit {
   activityForm= new FormGroup({
     description : new FormControl(null , Validators.required ),
-    date_debuit : new FormControl( null , Validators.required ),
-    date_fin : new FormControl( null , Validators.required ),
+    dateDebuit : new FormControl( null , Validators.required ),
+    dateFin : new FormControl( null , Validators.required ),
     etat : new FormControl( null , Validators.required ),
     idResponsable : new FormControl( null , Validators.required ),
     idExercise : new FormControl( null , Validators.required ),

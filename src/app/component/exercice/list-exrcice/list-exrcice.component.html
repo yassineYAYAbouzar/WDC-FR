@@ -1,1 +1,31 @@
-<p>list-exrcice works!</p>
+<main class="content">
+    <h1>Contacts</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, perspiciatis!</p>
+    <h2>Subheading</h2>      
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maiores hic, magnam deserunt ex voluptatum, ducimus consectetur et aut nobis quod maxime odit itaque natus ipsam quisquam quo inventore laudantium.</p>      
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates fuga debitis explicabo voluptatum deleniti?</p>      
+    <a routerLink="/admin/addexercice" class="btn btn-success"><i class="material-icons">&#xE147;</i><span>Add New Responsable</span></a>
+    <table>
+      <thead>
+        <tr>
+          <th>annee</th>
+          <th>Date Debut</th>
+          <th>Date Fin</th>
+          <th>status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let exercice of listExercice">
+          <td>{{exercice.annee}}</td>
+          <td>{{exercice.dateDebuit}}</td>
+          <td>{{exercice.dateFin}}</td>
+          <td>{{exercice.status}}</td>
+          <td>
+            <a routerLink="/admin/editexercice/{{exercice.id}}" class="btn btn-success">Edit</a>
+            <button class="btn btn-danger" (click)="delete(exercice.id)">Delete</button>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </main>

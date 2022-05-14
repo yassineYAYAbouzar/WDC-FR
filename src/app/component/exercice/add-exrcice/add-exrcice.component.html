@@ -1,1 +1,57 @@
-<p>add-exrcice works!</p>
+ 
+          <main class="content">
+            <form [formGroup]="exerciceForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label>annee :</label>
+                    <input formControlName="annee" type="date"  class="form-control" placeholder="annee" required>
+                    <div *ngIf="exerciceForm.get('annee')?.invalid && exerciceForm.get('annee')?.touched" class="alert alert-danger rounded-pill mt-2">
+                      <p class="text-danger" 
+                      *ngIf="exerciceForm.get('annee')?.getError('required')"
+                      >
+                      this field is required
+                      </p>
+                  </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label>dateDebuit :</label>
+                    <input formControlName="dateDebuit" type="date"  class="form-control" placeholder="dateDebuit" required>
+                      <div *ngIf="exerciceForm.get('dateDebuit')?.invalid && exerciceForm.get('dateDebuit')?.touched" class="alert alert-danger rounded-pill mt-2">
+                        <p class="text-danger" 
+                        *ngIf="exerciceForm.get('dateDebuit')?.getError('required')"
+                        >
+                        this field is required
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label>dateFin :</label>
+                      <input formControlName="dateFin" type="date"  class="form-control" placeholder="dateFin" required>
+                        <div *ngIf="exerciceForm.get('dateFin')?.invalid && exerciceForm.get('dateFin')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="exerciceForm.get('dateFin')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label>status :</label>
+                    <input formControlName="status" type="text"  class="form-control" placeholder="status" required>
+                      <div *ngIf="exerciceForm.get('status')?.invalid && exerciceForm.get('status')?.touched" class="alert alert-danger rounded-pill mt-2">
+                        <p class="text-danger" 
+                        *ngIf="exerciceForm.get('status')?.getError('required')"
+                        >
+                        this field is required
+                        </p>
+                    </div>
+                  </div>
+                
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </form>     
+
+          </main>
+          

@@ -14,22 +14,22 @@
                   </div>
                   </div>
                   <div class="col-md-4 mb-3">
-                    <label>date_debuit : <i>{{activity.date_debuit}}</i></label>
-                    <input formControlName="date_debuit" type="date"  class="form-control" placeholder="date_debuit" required>
-                      <div *ngIf="activityForm.get('date_debuit')?.invalid && activityForm.get('date_debuit')?.touched" class="alert alert-danger rounded-pill mt-2">
+                    <label>dateDebuit : <i>{{activity.dateDebuit}}</i></label>
+                    <input formControlName="dateDebuit" type="date"  class="form-control" placeholder="dateDebuit" required>
+                      <div *ngIf="activityForm.get('dateDebuit')?.invalid && activityForm.get('dateDebuit')?.touched" class="alert alert-danger rounded-pill mt-2">
                         <p class="text-danger" 
-                        *ngIf="activityForm.get('date_debuit')?.getError('required')"
+                        *ngIf="activityForm.get('dateDebuit')?.getError('required')"
                         >
                         this field is required
                         </p>
                     </div>
                   </div>
                   <div class="col-md-4 mb-3">
-                    <label>date_fin : <i>{{activity.date_fin}}</i></label>
-                      <input formControlName="date_fin" type="date"  class="form-control" placeholder="date_fin" required>
-                        <div *ngIf="activityForm.get('date_fin')?.invalid && activityForm.get('date_fin')?.touched" class="alert alert-danger rounded-pill mt-2">
+                    <label>dateFin : <i>{{activity.dateFin}}</i></label>
+                      <input formControlName="dateFin" type="date"  class="form-control" placeholder="dateFin" required>
+                        <div *ngIf="activityForm.get('dateFin')?.invalid && activityForm.get('dateFin')?.touched" class="alert alert-danger rounded-pill mt-2">
                           <p class="text-danger" 
-                          *ngIf="activityForm.get('date_fin')?.getError('required')"
+                          *ngIf="activityForm.get('dateFin')?.getError('required')"
                           >
                           this field is required
                           </p>
