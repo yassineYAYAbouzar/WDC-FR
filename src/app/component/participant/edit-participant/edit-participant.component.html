@@ -1,1 +1,89 @@
-<p>edit-participant works!</p>
+
+          <main class="content">
+            <form [formGroup]="participantForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label>Nom : <i>{{participant.nom}}</i></label>
+                    <input formControlName="nom" type="text"  class="form-control" placeholder="Nom" required>
+                    <div *ngIf="participantForm.get('nom')?.invalid && participantForm.get('nom')?.touched" class="alert alert-danger rounded-pill mt-2">
+                      <p class="text-danger" 
+                      *ngIf="participantForm.get('nom')?.getError('required')"
+                      >
+                      this field is required
+                      </p>
+                  </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label>Prenom : <i>{{participant.prenom}}</i></label>
+                    <input formControlName="prenom" type="text"  class="form-control" placeholder="Prenom" required>
+                      <div *ngIf="participantForm.get('prenom')?.invalid && participantForm.get('prenom')?.touched" class="alert alert-danger rounded-pill mt-2">
+                        <p class="text-danger" 
+                        *ngIf="participantForm.get('prenom')?.getError('required')"
+                        >
+                        this field is required
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label>Email : <i>{{participant.email}}</i></label>
+                      <input formControlName="email" type="email"  class="form-control" placeholder="Email" required>
+                        <div *ngIf="participantForm.get('email')?.invalid && participantForm.get('email')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="participantForm.get('email')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label>Telephone : <i>{{participant.telephone}}</i></label>
+                    <input formControlName="telephone" type="number"  class="form-control" placeholder="Telephone" required>
+                      <div *ngIf="participantForm.get('telephone')?.invalid && participantForm.get('telephone')?.touched" class="alert alert-danger rounded-pill mt-2">
+                        <p class="text-danger" 
+                        *ngIf="participantForm.get('telephone')?.getError('required')"
+                        >
+                        this field is required
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label>Structure : <i>{{participant.structure}}</i></label>
+                    <input formControlName="domaine" type="text" class="form-control" placeholder="Structure" required>
+                        <div *ngIf="participantForm.get('domaine')?.invalid && participantForm.get('domaine')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="participantForm.get('domaine')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label>Etat : <i> {{participant.etat}}</i></label>
+                    <input formControlName="etat"  type="text" class="form-control" placeholder="Etat" required>
+                        <div *ngIf="participantForm.get('etat')?.invalid && participantForm.get('etat')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="participantForm.get('etat')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label>Password : <i>***********</i></label>
+                  <input formControlName="password" type="password"  class="form-control" placeholder="Password" required>
+                      <div *ngIf="participantForm.get('password')?.invalid && participantForm.get('password')?.touched" class="alert alert-danger rounded-pill mt-2">
+                        <p class="text-danger" 
+                        *ngIf="participantForm.get('password')?.getError('required')"
+                        >
+                        this field is required
+                        </p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </form>     
+
+          </main>
+          

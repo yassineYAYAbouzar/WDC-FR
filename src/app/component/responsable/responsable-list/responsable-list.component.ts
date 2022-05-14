@@ -21,6 +21,7 @@ export class ResponsableListComponent implements OnInit {
 
   delete(respo : any){
     this.responsableService.deleteData(respo).subscribe(res=>{
+      console.log(respo)
       this.listResponsable.splice(this.listResponsable.indexOf(res))
     },(this.errorHandler))
   }

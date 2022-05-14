@@ -1,0 +1,89 @@
+ 
+          <main class="content">
+            <form [formGroup]="activityForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label>description : <i>{{activity.description}}</i></label>
+                    <input formControlName="description" type="text"  class="form-control" placeholder="description" required>
+                    <div *ngIf="activityForm.get('description')?.invalid && activityForm.get('description')?.touched" class="alert alert-danger rounded-pill mt-2">
+                      <p class="text-danger" 
+                      *ngIf="activityForm.get('description')?.getError('required')"
+                      >
+                      this field is required
+                      </p>
+                  </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label>date_debuit : <i>{{activity.date_debuit}}</i></label>
+                    <input formControlName="date_debuit" type="date"  class="form-control" placeholder="date_debuit" required>
+                      <div *ngIf="activityForm.get('date_debuit')?.invalid && activityForm.get('date_debuit')?.touched" class="alert alert-danger rounded-pill mt-2">
+                        <p class="text-danger" 
+                        *ngIf="activityForm.get('date_debuit')?.getError('required')"
+                        >
+                        this field is required
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label>date_fin : <i>{{activity.date_fin}}</i></label>
+                      <input formControlName="date_fin" type="date"  class="form-control" placeholder="date_fin" required>
+                        <div *ngIf="activityForm.get('date_fin')?.invalid && activityForm.get('date_fin')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="activityForm.get('date_fin')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label>etat : <i>{{activity.etat}}</i></label>
+                    <input formControlName="etat" type="text"  class="form-control" placeholder="etat" required>
+                      <div *ngIf="activityForm.get('etat')?.invalid && activityForm.get('etat')?.touched" class="alert alert-danger rounded-pill mt-2">
+                        <p class="text-danger" 
+                        *ngIf="activityForm.get('etat')?.getError('required')"
+                        >
+                        this field is required
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label>idResponsable : <i>{{activity.idResponsable}}</i></label>
+                    <input formControlName="idResponsable" type="text" class="form-control" placeholder="idResponsable" required>
+                        <div *ngIf="activityForm.get('idResponsable')?.invalid && activityForm.get('idResponsable')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="activityForm.get('idResponsable')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label>idExercise : <i>FORMATEUR</i></label>
+                    <input formControlName="idExercise" type="text" class="form-control" placeholder="idExercise" required>
+                        <div *ngIf="activityForm.get('idExercise')?.invalid && activityForm.get('idExercise')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="activityForm.get('idExercise')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label>typeactivity : <i> {{activity.typeactivity}}</i></label>
+                    <input formControlName="typeactivity"  type="text" class="form-control" placeholder="typeactivity" required>
+                        <div *ngIf="activityForm.get('typeactivity')?.invalid && activityForm.get('typeactivity')?.touched" class="alert alert-danger rounded-pill mt-2">
+                          <p class="text-danger" 
+                          *ngIf="activityForm.get('typeactivity')?.getError('required')"
+                          >
+                          this field is required
+                          </p>
+                      </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </form>     
+
+          </main>
+          

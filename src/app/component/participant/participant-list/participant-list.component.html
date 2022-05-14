@@ -24,7 +24,7 @@
           <td>{{respo.structure}}</td>
           <td>{{respo.etat}}</td>
           <td>
-            <button class="btn btn-success" (click)="update(respo.id)">Edit</button>
+            <a routerLink="/admin/editParticipant/{{respo.id}}" class="btn btn-success">Edit</a>
             <button class="btn btn-danger" (click)="delete(respo.id)">Delete</button>
           </td>
         </tr>
