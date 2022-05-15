@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ResponsableService } from '../../../service/responsable/responsable.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AppError } from 'src/app/common/app-error';
+import { InvalidData } from 'src/app/common/invalid-date';
+import Swal from 'sweetalert2';
+import { ServerDown } from 'src/app/common/server-down';
 @Component({
   selector: 'app-edit-responsable',
   templateUrl: './edit-responsable.component.html',
@@ -10,7 +14,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class EditResponsableComponent implements OnInit {
   responsable!: any; 
   responsableForm= new FormGroup({
-    nom : new FormControl(null , Validators.required ),
+    nom : new FormControl(null , Validators.required ) ,
     prenom : new FormControl( null , Validators.required ),
     email : new FormControl( null , Validators.required ),
     telephone : new FormControl( null , Validators.required ),
@@ -41,8 +45,23 @@ export class EditResponsableComponent implements OnInit {
   onSubmit(){
     this.activatedRoute.params.subscribe((params: Params) => {
       this.responsableService.updateDataById(params['id'],this.responsableForm.value).subscribe(res=>{
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Responsable has been Updated',
+          showConfirmButton: false,
+          timer: 1700
+        })
         this.route.navigateByUrl('/admin')
       })
+    },(error : AppError) =>{
+      if(error instanceof ServerDown){
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Server Is Down!',
+        })
+      }
     });
   }
 

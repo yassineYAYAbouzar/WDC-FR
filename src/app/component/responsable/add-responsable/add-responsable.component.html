@@ -60,6 +60,17 @@
                   </div>
                   </div>
                   <div class="col-md-3 mb-3">
+                    <label>structure</label>
+                    <input  formControlName="structure" type="text" class="form-control" placeholder="structure" required>
+                    <div *ngIf="responsableForm.get('structure')?.invalid && responsableForm.get('structure')?.touched" class="alert alert-danger rounded-pill mt-2">
+                      <p class="text-danger" 
+                      *ngIf="responsableForm.get('structure')?.getError('required')"
+                      >
+                      this field is required
+                      </p>
+                  </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
                     <label>TypeResponsable</label>
                     <input type="text" formControlName="typeResponsable" class="form-control" placeholder="TypeResponsable" required>
                     <div *ngIf="responsableForm.get('typeResponsable')?.invalid && responsableForm.get('typeResponsable')?.touched" class="alert alert-danger rounded-pill mt-2">
