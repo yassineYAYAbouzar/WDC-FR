@@ -42,6 +42,27 @@ export class TokenService {
     return false
   }
 
+  isAdmin(): Boolean{
+    if(this.getInfo()?.authorities[6].authority === 'ROLE_ADMIN'){
+      return true;
+    }else{
+      return false
+    }
+  }
+  isResponsable(): Boolean{
+    if(this.getInfo()?.authorities[6].authority === 'ROLE_RESPONSABLE'){
+      return true;
+    }else{
+      return false
+    }
+  }
+  isParticipant(): Boolean{
+    if(this.getInfo()?.authorities[6].authority === 'ROLE_PARTICIPANT'){
+      return true;
+    }else{
+      return false
+    }
+  }
 
   getInfo(){
     const token = this.getTocken()

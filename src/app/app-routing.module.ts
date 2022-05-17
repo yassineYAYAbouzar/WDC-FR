@@ -17,13 +17,15 @@ import { AddActivityComponent } from './component/activity/add-activity/add-acti
 import { ListExrciceComponent } from './component/exercice/list-exrcice/list-exrcice.component';
 import { AddExrciceComponent } from './component/exercice/add-exrcice/add-exrcice.component';
 import { UpdateExrciceComponent } from './component/exercice/update-exrcice/update-exrcice.component';
+import { AdminGuard } from './guards/admin.guard';
+import { ResponsableGuard } from './guards/responsable.guard';
 
 const routes: Routes = [
 
  
   { 
     component: WelcomeComponent,
-    canActivate:[AuthGuard],
+    canActivate:[AdminGuard],
     path: 'admin', children:[
       {
         path : "",
@@ -42,16 +44,38 @@ const routes: Routes = [
         component : AddResponsableComponent
       },
       {
+        path : "editResponsable/:id",
+        component : EditResponsableComponent
+      },
+      {
+        path : "editParticipant/:id",
+        component : EditParticipantComponent
+      },
+      {
+        path : "listActivity",
+        component : ActivityListComponent
+      }
+    ]
+  },
+  { 
+    component: WelcomeComponent,
+    canActivate:[ResponsableGuard],
+    path: 'responsable', children:[
+      {
+        path : "listParticipant",
+        component : ParticipantListComponent
+      },
+      {
+        path : "listExrcice",
+        component : ListExrciceComponent
+      },
+      {
         path : "addActivity",
         component : AddActivityComponent
       },
       {
         path : "addexercice",
         component : AddExrciceComponent
-      },
-      {
-        path : "editResponsable/:id",
-        component : EditResponsableComponent
       },
       {
         path : "editParticipant/:id",
@@ -64,6 +88,20 @@ const routes: Routes = [
       {
         path : "editexercice/:id",
         component : UpdateExrciceComponent
+      },
+      {
+        path : "listActivity",
+        component : ActivityListComponent
+      }
+    ]
+  },
+  { 
+    component: WelcomeComponent,
+    canActivate:[AuthGuard],
+    path: 'participant', children:[
+      {
+        path : "listExrcice",
+        component : ListExrciceComponent
       },
       {
         path : "listActivity",

@@ -2,13 +2,13 @@
 
 <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__list-item " [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['nav__list-item--active']">
+      <li [hidden]="!isAdmin() || isParticipant()"  class="nav__list-item " [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['nav__list-item--active']">
         <a routerLink="/admin" class="nav__item-link ">Responsables</a>
       </li>
-      <li class="nav__list-item" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['nav__list-item--active']">
+      <li  class="nav__list-item" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['nav__list-item--active']">
         <a routerLink="listActivity" class="nav__item-link">Liste des activités</a>
       </li>
-      <li class="nav__list-item " [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['nav__list-item--active']">
+      <li [hidden]="isParticipant()" class="nav__list-item " [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['nav__list-item--active']">
         <a routerLink="listParticipant" class="nav__item-link">Liste des participants</a>
       </li>
       <li class="nav__list-item " [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['nav__list-item--active']">

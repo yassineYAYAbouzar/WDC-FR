@@ -7,7 +7,8 @@ import { AccountService } from '../service/account.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AdminGuard implements CanActivate {
+private authorities  : any
   constructor(private tokenService :TokenService, 
               private accountService :AccountService,
               private router:Router){}
@@ -15,16 +16,14 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean  {
-     
-     if (!this.tokenService.loggedIn()) {
-       
-      this.tokenService.remove()
-      this.accountService.changeStatus(false)
-      this.router.navigateByUrl("/login")
-      return false
       
-    }
-    return true
+      this.authorities = this.tokenService.getInfo()?.authorities[6]
+      console.log(this.authorities?.authority)
+    if(this.authorities?.authority != 'ROLE_ADMIN'){
+      this.router.navigateByUrl("/responsable")
+      return false
+     }
+     return true
   }
   
 }

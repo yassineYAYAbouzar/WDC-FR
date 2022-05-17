@@ -13,7 +13,7 @@ export class AlredyAuthGuard implements CanActivate {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot): boolean  {
         if (this.tokenService.loggedIn()) {
-            this.router.navigateByUrl('')
+            this.router.navigateByUrl('/admin')
         return false
         }
         return true

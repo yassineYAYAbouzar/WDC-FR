@@ -70,28 +70,28 @@
                       </p>
                   </div>
                   </div>
-                  <div class="col-md-3 mb-3">
-                    <label>TypeResponsable</label>
-                    <input type="text" formControlName="typeResponsable" class="form-control" placeholder="TypeResponsable" required>
-                    <div *ngIf="responsableForm.get('typeResponsable')?.invalid && responsableForm.get('typeResponsable')?.touched" class="alert alert-danger rounded-pill mt-2">
-                      <p class="text-danger" 
-                      *ngIf="responsableForm.get('typeResponsable')?.getError('required')"
-                      >
-                      this field is required
-                      </p>
+                  
+                  <div class="form-group w-25">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select formControlName="typeResponsable" class="form-control" id="exampleFormControlSelect1">
+                      <option value="1">FORMATEUR</option>
+                      <option value="2">EMPLOYEE</option>
+                      <option value="3">CME</option>
+                    </select>
                   </div>
+                  <div class="form-check my-3">
+                    <input formControlName="etat" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="true" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                      Active
+                    </label>
                   </div>
-                  <div class="col-md-3 mb-3">
-                    <label>Etat</label>
-                    <input  formControlName="etat" type="text" class="form-control" placeholder="Etat" required>
-                      <div *ngIf="responsableForm.get('etat')?.invalid && responsableForm.get('etat')?.touched" class="alert alert-danger rounded-pill mt-2">
-                        <p class="text-danger" 
-                        *ngIf="responsableForm.get('etat')?.getError('required')"
-                        >
-                        this field is required
-                        </p>
-                    </div>
+                  <div class="form-check">
+                    <input formControlName="etat" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="false">
+                    <label class="form-check-label" for="exampleRadios2">
+                      InActive
+                    </label>
                   </div>
+
                   <div class="col-md-3 mb-3">
                     <label>Password</label>
                     <input formControlName="password" type="password" class="form-control" placeholder="Password" required>

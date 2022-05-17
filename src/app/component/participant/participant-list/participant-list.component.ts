@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppError } from 'src/app/common/app-error';
 import { NotFoundErrorPage } from 'src/app/common/not-found';
 import { ParticipantService } from '../../../service/participant/participant.service';
+import { TokenService } from '../../../service/token.service';
 
 @Component({
   selector: 'app-participant-list',
@@ -10,14 +11,16 @@ import { ParticipantService } from '../../../service/participant/participant.ser
 })
 export class ParticipantListComponent implements OnInit {
   participantList : any
-  constructor(private participantService : ParticipantService) { }
+  constructor(private participantService : ParticipantService , private tokenService :TokenService) { }
 
   ngOnInit(): void { 
     this.participantService.fetchDataList().subscribe(res=>{
       this.participantList = res
     })
   }
-
+  isAdmin() : Boolean{
+    return this.tokenService.isAdmin()
+  }
   delete(partic : any){
     this.participantService.deleteData(partic).subscribe(res=>{
       console.log(partic)

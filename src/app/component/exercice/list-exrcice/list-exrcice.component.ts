@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppError } from 'src/app/common/app-error';
 import { NotFoundErrorPage } from 'src/app/common/not-found';
 import { ExerciceActivityService } from '../../../service/exercice/exercice-activity.service';
+import { TokenService } from '../../../service/token.service';
 
 @Component({
   selector: 'app-list-exrcice',
@@ -11,7 +12,7 @@ import { ExerciceActivityService } from '../../../service/exercice/exercice-acti
 export class ListExrciceComponent implements OnInit {
 
   listExercice : any
-  constructor(private ExerciceService : ExerciceActivityService) { }
+  constructor(private ExerciceService : ExerciceActivityService ,private tokenService : TokenService) { }
 
   ngOnInit(): void {
     this.ExerciceService.fetchDataList().subscribe(res=>{
@@ -19,6 +20,9 @@ export class ListExrciceComponent implements OnInit {
     })
   }
 
+  isResponsable() : Boolean{
+    return this.tokenService.isResponsable()
+  }
   delete(respo : any){
     this.ExerciceService.deleteData(respo).subscribe(res=>{
       this.listExercice.splice(this.listExercice.indexOf(res))

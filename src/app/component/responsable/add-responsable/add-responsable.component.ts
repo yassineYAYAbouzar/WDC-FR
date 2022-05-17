@@ -28,24 +28,21 @@ export class AddResponsableComponent implements OnInit {
   }
   onSubmit(){
     this.responsableService.addData(this.responsableForm.value).subscribe(res=>{
-      
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Responsable has been saved',
+        showConfirmButton: false,
+        timer: 1700
+      })
+      this.route.navigateByUrl('/admin')
     },(error : AppError) =>{
       if(error instanceof InvalidData){
-        console.log(error)
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
           text: 'Please Enter Valid Information!',
         })
-      }else{
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Responsable has been saved',
-          showConfirmButton: false,
-          timer: 1700
-        })
-        this.route.navigateByUrl('/admin')
       }
     })
   }

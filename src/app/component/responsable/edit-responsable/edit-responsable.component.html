@@ -3,8 +3,8 @@
             <form [formGroup]="responsableForm" (ngSubmit)="onSubmit()">
                 <div class="form-row">
                   <div class="col-md-4 mb-3">
-                    <label>Nom : <i>{{responsable.nom}}</i></label>
-                    <input formControlName="nom" type="text"  class="form-control" placeholder="Nom" required>
+                    <label>Nom </label>
+                    <input formControlName="nom" type="text"  class="form-control" placeholder="Nom" required [(ngModel)]="responsable.nom">
                     <div *ngIf="responsableForm.get('nom')?.invalid && responsableForm.get('nom')?.touched" class="alert alert-danger rounded-pill mt-2">
                       <p class="text-danger" 
                       *ngIf="responsableForm.get('nom')?.getError('required')"
@@ -14,8 +14,8 @@
                   </div>
                   </div>
                   <div class="col-md-4 mb-3">
-                    <label>Prenom : <i>{{responsable.prenom}}</i></label>
-                    <input formControlName="prenom" type="text"  class="form-control" placeholder="Prenom" required>
+                    <label>Prenom </label>
+                    <input formControlName="prenom" [(ngModel)]="responsable.prenom" type="text"  class="form-control" placeholder="Prenom" required>
                       <div *ngIf="responsableForm.get('prenom')?.invalid && responsableForm.get('prenom')?.touched" class="alert alert-danger rounded-pill mt-2">
                         <p class="text-danger" 
                         *ngIf="responsableForm.get('prenom')?.getError('required')"
@@ -25,8 +25,8 @@
                     </div>
                   </div>
                   <div class="col-md-4 mb-3">
-                    <label>Email : <i>{{responsable.email}}</i></label>
-                      <input formControlName="email" type="email"  class="form-control" placeholder="Email" required>
+                    <label>Email </label>
+                      <input formControlName="email" [(ngModel)]="responsable.email" type="email"  class="form-control" placeholder="Email" required>
                         <div *ngIf="responsableForm.get('email')?.invalid && responsableForm.get('email')?.touched" class="alert alert-danger rounded-pill mt-2">
                           <p class="text-danger" 
                           *ngIf="responsableForm.get('email')?.getError('required')"
@@ -38,8 +38,8 @@
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label>Telephone : <i>{{responsable.telephone}}</i></label>
-                    <input formControlName="telephone" type="number"  class="form-control" placeholder="Telephone" required>
+                    <label>Telephone </label>
+                    <input formControlName="telephone" [(ngModel)]="responsable.telephone" type="number"  class="form-control" placeholder="Telephone" required>
                       <div *ngIf="responsableForm.get('number')?.invalid && responsableForm.get('number')?.touched" class="alert alert-danger rounded-pill mt-2">
                         <p class="text-danger" 
                         *ngIf="responsableForm.get('number')?.getError('required')"
@@ -49,8 +49,8 @@
                     </div>
                   </div>
                   <div class="col-md-3 mb-3">
-                    <label>Domaine : <i>{{responsable.nom}}</i></label>
-                    <input formControlName="domaine" type="text" class="form-control" placeholder="Domaine" required>
+                    <label>Domaine </label>
+                    <input formControlName="domaine" [(ngModel)]="responsable.domaine" type="text" class="form-control" placeholder="Domaine" required>
                         <div *ngIf="responsableForm.get('domaine')?.invalid && responsableForm.get('number')?.touched" class="alert alert-danger rounded-pill mt-2">
                           <p class="text-danger" 
                           *ngIf="responsableForm.get('domaine')?.getError('required')"
@@ -59,30 +59,33 @@
                           </p>
                       </div>
                   </div>
-                  <div class="col-md-3 mb-3">
-                    <label>TypeResponsable : <i>FORMATEUR</i></label>
-                    <input formControlName="typeResponsable" type="text" class="form-control" placeholder="TypeResponsable" required>
-                        <div *ngIf="responsableForm.get('typeResponsable')?.invalid && responsableForm.get('typeResponsable')?.touched" class="alert alert-danger rounded-pill mt-2">
-                          <p class="text-danger" 
-                          *ngIf="responsableForm.get('typeResponsable')?.getError('required')"
-                          >
-                          this field is required
-                          </p>
-                      </div>
+
+                  <div class="form-group w-25">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select formControlName="typeResponsable" class="form-control" id="exampleFormControlSelect1">
+                      <option value="1">FORMATEUR</option>
+                      <option value="2">EMPLOYEE</option>
+                      <option value="3">CME</option>
+                    </select>
                   </div>
-                  <div class="col-md-3 mb-3">
-                    <label>Etat : <i> {{responsable.etat}}</i></label>
-                    <input formControlName="etat"  type="text" class="form-control" placeholder="Etat" required>
-                        <div *ngIf="responsableForm.get('etat')?.invalid && responsableForm.get('etat')?.touched" class="alert alert-danger rounded-pill mt-2">
-                          <p class="text-danger" 
-                          *ngIf="responsableForm.get('etat')?.getError('required')"
-                          >
-                          this field is required
-                          </p>
-                      </div>
+
+                  <div class="form-check my-3">
+                    <input formControlName="etat" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="true" >
+                    <label class="form-check-label" for="exampleRadios1">
+                      Active
+                    </label>
                   </div>
+                  <div class="form-check">
+                    <input formControlName="etat" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="false" checked>
+                    <label class="form-check-label" for="exampleRadios2">
+                      InActive
+                    </label>
+                  </div>
+
+
+
                   <div class="col-md-3 mb-3">
-                    <label>Password : <i>***********</i></label>
+                    <label>Password  <i></i></label>
                     <input formControlName="password" type="password"  class="form-control" placeholder="Password" required>
                         <div *ngIf="responsableForm.get('password')?.invalid && responsableForm.get('password')?.touched" class="alert alert-danger rounded-pill mt-2">
                           <p class="text-danger" 

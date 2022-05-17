@@ -12,6 +12,8 @@ export class NavbarComponent implements OnInit {
 
 
   currentUser = null
+  authorities : any = null
+  
 
 
   constructor(private accountService : AccountService,
@@ -22,8 +24,16 @@ export class NavbarComponent implements OnInit {
     this.accountService.authStatus.subscribe(res=>{
       this.currentUser = this.tokenService.getInfo()
     })
+    
   }
 
+
+  isAdmin() : Boolean{
+    return this.tokenService.isAdmin()
+  }
+  isParticipant() : Boolean{
+    return this.tokenService.isParticipant()
+  }
 
   logout(){
     this.tokenService.remove()
